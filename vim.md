@@ -1,0 +1,43 @@
+# this is vim's key words
+
+- i: is insert after now;
+- o: is insert next line;
+- a: is append new word now;
+- I: is insert at the begin of the line;
+- O: is insert at the up of a line;
+- A: is append at the end of the line;
+
+- G: is jump to the end of this document;
+- 0: is jump to the begin of this line;
+- $: is jump to the end of this line;
+- gg: is jump to the begin of this document;
+- M: is jump to the medium of all of the document;
+- L: is jump to the first of the last line in the document;
+
+- d: is delete 
+    - dd: is delete this line;
+    - D: is delete from this word to the end of this line and have current word;
+    - d0: is delete from the begin word to this word and don't have current word;
+- r: is replace after current word;
+- R: is replace before current word;
+- u: undo last comment;
+- C-r: re-do last comment;
+- x: delete current word;
+- /: search key words;
+    - n: change to the next key words;
+    - N: change to the forward key words;
+- <<: let this line move left;
+- >>: let this line move right;
+- {: is jump to the forward article;
+- }: is jump to the next article;
+- .: is repeat the last comment;
+- w: jump to the begin of the next words;
+- e: jump to the end of the next words;
+- b: jump to the begin of the forward words;
+- v: is view to select muti-line;
+- yy: copy this line;
+- p: past;
+- C-d: jump down half of a page;
+- C-u: jump up half of a page;
+- C-f: jump down a page;
+- C-b: jump up a page;
