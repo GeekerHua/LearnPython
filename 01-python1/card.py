@@ -1,5 +1,5 @@
-#/usr/bin/python
-#code=utf-8
+#!/usr/bin/env python
+# coding=utf-8
 
 name = input("请输入你的名字：")
 age = input("请输入你的年龄:")
