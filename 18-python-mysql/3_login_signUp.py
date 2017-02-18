@@ -3,7 +3,8 @@
 from  MysqlHelper import  MysqlHelper
 from hashlib import sha1
 
-# passwd
+
+# passwd encryption
 def encryption(passwd):
     s1 = sha1()
     s1.update(passwd)
@@ -18,7 +19,8 @@ def login():
 
     sql = 'select passwd from users where name=%s'
     result = sqlHelp.fetchOne(sql, [name])
-    if result == None:
+    print("login sql result ==  %s",result)
+    if not result:
         print("Not have this name!!!")
     elif result[0] == hashPwd:
         print("login success")
@@ -31,9 +33,9 @@ def signUp():
     pwd = raw_input('Please input user password:')
     hashPwd = encryption(pwd)
 
-    sql = 'select name from users where name=%s'
+    sql = 'select count(*) from users where name=%s'
     result = sqlHelp.fetchOne(sql, [name])
-    if result != None:
+    if result[0]:
          print("There has the same name, please change a new name.")
     else:
         newSql = 'insert into users VALUES(0, %s, %s)'

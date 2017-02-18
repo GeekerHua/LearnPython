@@ -28,6 +28,8 @@ class MysqlHelper:
                 self.close()
                 return result
             except Exception, e:
+                self.coon.rollback();
+                self.close()
                 print(e)
         return wrappedfunc
 
