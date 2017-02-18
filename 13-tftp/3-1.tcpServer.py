@@ -1,4 +1,4 @@
-#coding=utf-8
+# coding=utf-8
 
 from socket import *
 
@@ -11,13 +11,13 @@ serverSocket.listen(4)
 while True:
     newSocket, destAddr = serverSocket.accept()
 
-    print("处理数据 ip = %s"%str(destAddr))
+    print("处理数据 ip = %s" % str(destAddr))
     try:
         while True:
             recvData = newSocket.recv(1024)
 
             if len(recvData) > 0:
-                print("处理消息%s"%recvData)
+                print("处理消息%s" % recvData)
             else:
                 print("客户端先关闭了")
                 break
