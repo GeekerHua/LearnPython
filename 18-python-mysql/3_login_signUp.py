@@ -1,6 +1,7 @@
 # coding=utf-8
 
-from  MysqlHelper import  MysqlHelper
+from MysqlHelper import MysqlHelper
+from Redistest import RedisHelper
 from hashlib import sha1
 
 
@@ -17,15 +18,24 @@ def login():
     pwd = raw_input('Please input user password:')
     hashPwd = encryption(pwd)
 
-    sql = 'select passwd from users where name=%s'
-    result = sqlHelp.fetchOne(sql, [name])
-    print("login sql result ==  %s",result)
-    if not result:
-        print("Not have this name!!!")
-    elif result[0] == hashPwd:
-        print("login success")
+    # redis查找
+    if not redisHelper.get(name):
+        # sql查找
+        sql = 'select passwd from users where name=%s'
+        result = sqlHelp.fetchOne(sql, [name])
+        print("login sql result ==  %s",result)
+        if not result:
+            print("Not have this name!!!")
+        elif result[0] == hashPwd:
+            print("login success")
+            redisHelper.set(name, hashPwd)
+        else:
+            print("login faild, Error name or password!!!")
     else:
-        print("login faild, Error name or password!!!")
+        if redisHelper.get(name) == hashPwd :
+            print("login success from redis")
+        else:
+            print("login faild, Error password!!!")
 
 
 def signUp():
@@ -44,7 +54,7 @@ def signUp():
 
 if __name__ == "__main__":
     sqlHelp = MysqlHelper('localhost', 3306, 'python3', 'root', '1234qwer')
-
+    redisHelper = RedisHelper('localhost', 6379)
     inputStr = raw_input("1:login, 2:sign up  >> ")
     if inputStr == "1":
         login()
