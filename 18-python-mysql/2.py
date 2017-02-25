@@ -1,5 +1,4 @@
 # coding=utf-8
-
 from MysqlHelper import MysqlHelper
 
 sqlHelper = MysqlHelper('localhost', 3306, 'python3', 'root', '1234qwer')
