@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        .clearfix:before{
+            content: "";
+            display: table
+        }
+        .div1{
+            background-color: yellow;
+            height: 200px;
+            width: 200px;
+            /*overflow: hidden;*/
+            /*border: 1px solid black;*/
+            /*padding-top: : 50px;*/
+        }
+
+        .div2{
+            background-color: green;
+            height: 100px;
+            width: 100px;
+            margin-top: 50px;
+        }
+
+        .con{
+            font-size: 0;
+            background-color: pink;
+        }
+        a{
+            background-color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1 clearfix">
+        <div class="div2">
+        </div>
+    </div>
+    <div class="con">
+        <a href="">kkk</a>
+        <a href="">kkk</a>
+        <a href="">kkk</a>
+        <a href="">kkk</a>
+    </div>
+
+</body>
+</html>

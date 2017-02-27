@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css样式</title>
+    <!-- <link rel="stylesheet" style="text/css" href="css/main.css"> -->
+
+    <!-- 第二种插入样式的方法 部分推荐-->
+    <style type="text/css">
+        p{
+            color: pink;
+            font-size:32px;
+        }
+        
+        /*伪类选择器，伪元素选择器*/
+        #duanluo:before{
+            content: "你好";
+            color: green
+        }
+        #duanluo:after{
+            content: "吃饭";
+            color: blue;
+        }
+
+        #duanluo:hover{
+            color: yellow;
+        }
+    </style>
+
+    
+</head>
+<body>
+    <p><h1>页面引用样式</h1></p>
+
+    <hr>
+    <p id="duanluo">段落一</p>
+    <p id="duanluo2">段落二</p>
+    <p id="duanluo3">段落三</p>
+
+    <!-- 第一种插入样式的方法，不推荐 -->
+   <!--  <div style="font-size:24px;color: red;border-width: 2px;border-color: green;font-weight: bold;">this is div</div> -->
+    
+    <p>这是一个段落</p>
+
+    <a href="">cccc</a>
+    <div>
+        <em>HTML;</em>这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落,这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落.这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落s
+    </div>
+
+</body>
+</html>

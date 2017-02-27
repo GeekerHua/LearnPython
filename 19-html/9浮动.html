@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .con{
+            height: 300px;
+            width: 300px;
+            /*overflow: auto;*/
+            border: 1px solid #000;
+            margin: 50px auto 0;
+        }
+        .con div{
+            width: 100px;
+            height: 100px;
+
+        }
+        .box01{
+            background-color: yellow;
+            float: left;
+            
+        }
+
+        .box02{
+            background-color: green;
+            float: left;
+            
+        }
+
+        .con2{
+            list-style: none;
+            width: 200px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 50px auto 0;
+            padding: 0;
+        }
+
+        .con2 li{
+            width: 50px;
+            height: 30px;
+            background-color: gold;
+            margin: 10px;
+            float: left;
+        }
+      /*-----*/
+        .box1{
+            width: 400px;
+            height: 80px;
+            margin: 10px auto;
+
+            border: 1px solid orange;
+        }
+         .box1 .box1r,.box1l{
+            width: 60px;
+            height: 60px;
+            margin: 10px;
+        }
+
+        .box1 .box1l{
+            background-color: #90ee90;
+            float: left;
+        }
+        
+        .box1 .box1r{
+            background-color: pink;
+            float: right;
+        }
+       
+       .box2{
+            width: 400px;
+            height: 41px;
+            margin: 10px auto;
+            border-bottom: 1px solid #ff8200;
+            /*background-color: red;*/
+            padding: 0;
+       }
+
+       .box2 h1{
+            display: inline-block;
+            /*line-height: 41px;*/
+            font: normal 16px/41px "Microsoft Yahei";
+            background-color: #ff8200;
+            color: white;
+            margin: 0;
+       }
+
+       .box2 a{
+            float: right;
+            font: normal 14px/41px "Microsoft Yahei";
+            color: #666;
+            text-decoration: none;
+       }
+
+        .box3{
+            width: 694px;
+            height: 50px;
+            margin: 10px auto;
+            padding: 0px;
+        }
+
+        .box3 ul{
+            list-style: none;
+            padding: 0;
+            margin: 0
+        }
+
+        .box3 li:hover{
+            background-color: gold;
+
+        }
+
+        .box3 li:hover a{
+            color: white;
+        }
+
+        .box3 li{
+            border: 1px solid gold;
+            height: 48px;
+            float: left;
+            width: 98px;
+            text-align: center;
+            font: normal 16px/48px "Microsoft Yahei";
+            margin-left: -1px;
+        }
+
+        .box3 li a{
+            text-decoration: none;
+            color: pink;
+
+        }
+
+        .box4{
+            border: 1px solid #000;
+            margin: 10px auto;
+            width: 432px;
+            height: 192px;
+            overflow: auto;
+            padding: 10px;
+        }
+
+        .box4 img{
+            margin: 10px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box1l"></div>
+        <div class="box1r"></div>
+
+    </div>
+
+    <div class="box2">
+        <h1>新闻标题</h1>
+        <a href="#">更多></a>
+    </div>
+
+    <div class="box3">
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">公司简介</a></li>
+            <li><a href="#">解决方案</a></li>
+            <li><a href="#">公司新闻</a></li>
+            <li><a href="#">行业动态</a></li>
+            <li><a href="#">招贤纳士</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+
+    </div>
+
+    <div class="box4">
+        <img src="images/bg.jpg" alt="北京图">
+        在最后一个子元素的后面加一个空的div，给它样式属性 clear:both（不推荐）使用成熟的清浮动样式类，clearfix 在最后一个子元素的后面加一个空的div，给它样式属性 clear:both（不推荐）使用成熟的清浮动样式类，clearfix在最后一个子元素的后面加一个空的div，给它样式属性 clear:both（不推荐）使用成熟的清浮动样式类，clearfix 在最后一个子元素的后面加一个空的div，给它样式属性 clear:both（不推荐）在最后一个子元素的后面加一个空的div，给它样式属性 clear:both（不推荐）使用成熟的清浮动样式类，clearfix 在最后一个子元素的后面加一个空的div，给它样式属性 clear:both（不推荐）
+
+    </div>
+    
+    <div class="con">
+        <div class="box01"></div>
+        <div class="box02"></div>
+    </div>
+
+    <ul class="con2">
+        <li>111</li>
+        <li>121</li>
+        <li>131</li>
+        <li>141</li>
+        <li>151</li>
+        <li>161</li>
+        <li>171</li>
+        <li>181</li>
+    </ul>
+</body>
+</html>

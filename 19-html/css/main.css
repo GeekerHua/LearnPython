@@ -1,0 +1,35 @@
+h1{
+    color: #b803a2;
+    font-size:22px;
+    font-family: "Macrosoft Yahei";
+    font-style: italic;  /*倾斜*/
+    /*font-weight: normal;*/
+}
+
+p{
+     text-align: center;
+
+}
+em{
+    font-style: normal;   /*不倾斜*/
+    text-decoration: underline;
+}
+
+div{
+    line-height: 24px;
+    font: normal 18px/36px "Macrosoft Yahei";
+    text-indent: 36px;
+}
+
+a{
+    text-decoration: none;
+}
+
+#duanluo,#duanluo2{
+    color: red;
+}
+
+#duanluo2{
+    font-size: 22px;
+}
+
