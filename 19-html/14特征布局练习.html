@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>特征布局练习</title>
+    <style>
+        .box{
+            border: 1px solid #000;
+            width: 960px;
+            height: 40px;
+            margin: 50px auto 0px;
+            text-align: center;
+            font-size: 0;
+        }
+
+        .box1 a,span{
+            padding: 5px 10px;
+            font: normal 12px/12px "Microsoft Yahei";
+            text-decoration: none;
+            color: #000;
+            text-align: center;
+            margin-top: 10px;
+            display: inline-block;
+            margin-left: 5px;
+        }
+        .box1 a{
+            background-color: gold;
+        }
+    
+        .box1 a:hover{
+            background-color: #00619f;
+            color: #fff;
+        }
+
+        .box2 a{
+            /*background-color: green;*/
+            border-right: 1px solid #333;
+            /*display: inline-block;*/
+            font: normal 14px/14px "Microsoft Yahei";
+            padding: 0 20px;
+            line-height: 40px;
+            text-decoration: none;
+            color: #333;
+        }
+        .box2 .last{
+             border-right: 0px;
+        }
+        .box2 a:hover{
+            color: red;
+        }
+
+        .box3{
+            background-color: #55a8ea;
+            border: 0;
+        }
+        .box3 ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: relative;
+        }
+        .box3 li{
+            float: left;
+            width: 100px;
+            height: 40px;
+        }
+        .box3 li a:hover{
+             background-color: #00619f;
+        }
+        .box3 a{
+            font: normal 14px/14px "Microsoft Yahei";
+            color: #fff;
+            padding: 0;
+            line-height: 40px;
+            text-decoration: none;
+            display: block;
+        }
+        .box3 .new{
+            position: absolute;
+            left: 434px;
+            top: -10px;
+            height: 10 px;
+            width: 20px;
+        }
+        
+        .box4{
+            width: 958px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 50px auto 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        <a href="#">上一页</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <span>……</span>
+        <a href="#">17</a>
+        <a href="#">18</a>
+        <a href="#">19</a>
+        <a href="#">下一页</a>
+    </div>
+    <div class="box box2">
+        <a href="#">首页</a>
+        <a href="#">网站建设</a>
+        <a href="#">程序开发</a>
+        <a href="#">网络营销</a>
+        <a href="#">企业AI</a>
+        <a href="#">案例展示</a>
+        <a href="#" class="last">联系我们</a>
+    </div>
+    <div class="box box3">
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">网站建设</a></li>
+            <li><a href="#">程序开发</a></li>
+            <li><a href="#">网络营销</a></li>
+            <li><a href="#">企业AI</a></li>
+            <li><a href="#">案例展示</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li class="new"><img src="images/new.png" alt=""></li>
+        </ul>
+    </div>
+    <div class="box4">
+        
+    </div>
+
+</body>
+</html>

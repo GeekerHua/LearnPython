@@ -1,0 +1,384 @@
+body{
+    font-family: "MicrosoftYaHei";
+    font-size: 12px;
+}
+
+/*页面顶部*/
+.header_con{
+    height: 29px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f7f7f7;
+}
+
+.header{
+    width: 1200px;
+    height: 29px;
+    margin: 0 auto;
+}
+
+.welcome,.user_login_btn,.user_info,.user_link{
+    height: 29px;
+    line-height: 29px;
+    color: #666;
+}
+
+.user_login_btn a,.user_info a,.user_link a{
+    color: #666;
+}
+
+.user_login_btn a:hover,.user_link a:hover{
+    color: #f80;
+}
+.top_user_info span{
+    padding: 0 12px;
+    color: #cecece;
+}
+
+.user_info{
+    display: none;
+}
+
+.user_info em{
+    color: #f80; 
+}
+
+/*搜索区域*/
+.center_con{
+    width: 1200px;
+    height: 115px;
+    margin: 0 auto;
+}
+
+.logo{
+    width: 150px;
+    height: 59px;
+    margin: 29px 0 0 17px;
+}
+
+.search_con{
+    border: 1px solid #37ab40;
+    width: 616px;
+    height: 38px;
+    margin: 34px 0 0 124px;
+    background: url(../images/icons.png) 10px 10px no-repeat;
+}
+
+.input_txt{
+    width: 480px;
+    height: 38px;
+    margin-left: 36px;
+    border: 0px;
+    outline: none;
+}
+
+.input_sub{
+    height: 38px;
+    width: 100px;
+    background-color: #37ab40;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.chart_con{
+    height: 40px;
+    width: 200px;
+    margin-top: 34px;
+}
+
+.chart_con a{
+    width: 158px;
+    height: 38px;
+    border: 1px solid #ddd;
+    text-indent: 56px;
+    line-height: 38px;
+    font-style: 14px;
+    color: #37ab40;
+    background:  url(../images/icons.png) 12px -45px no-repeat #f7f7f7;
+}
+
+.chart_con span{
+    width: 40px;
+    height: 40px;
+    background-color: #f80;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/*菜单*/
+.main_nenu_con{
+    height: 40px;
+    border-bottom: 2px solid #37ab40;
+}
+
+.main_menu{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.main_menu h2{
+    width: 200px;
+    height: 40px;
+    background-color: #37ab40;
+    font: normal 14px/40px "MicrosoftYaHei";
+    color: #fff;
+    text-align: center;
+}
+.main_menu ul{
+    overflow: hidden;
+}
+
+.main_menu li{
+    float: left;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.main_menu li a{
+    padding: 0 22px;
+    color: #666;
+    border-left: 1px solid #ddd;
+    font-size: 14px;
+    margin-left: -1px;
+}
+.main_menu li a:hover{
+    color: #f80;
+}
+
+.center_con2{
+    width: 1200px;
+    height: 270px;
+    margin: 0 auto;
+}
+
+.sub_menu{
+    width: 200px;
+    height: 100%;
+}
+
+.sub_menu li {
+    width: 198px;
+    height: 44px;
+    border: 1px solid #eee;
+    border-top: 0;
+    background: url(../images/icons.png) 177px -87px no-repeat;
+}
+.sub_menu li a{
+    height: 44px;
+    display: block;
+    line-height: 44px;
+    font-size: 14px;
+    color: #333;
+    text-indent: 71px;
+    background: url(../images/icons.png) 32px -140px no-repeat;
+}
+.sub_menu li .icon02{
+    background: url(../images/icons.png) 32px -190px no-repeat;
+}
+.sub_menu li .icon03{
+    background: url(../images/icons.png) 32px -240px no-repeat;
+}
+.sub_menu li .icon04{
+    background: url(../images/icons.png) 32px -290px no-repeat;
+}
+.sub_menu li .icon05{
+    background: url(../images/icons.png) 32px -340px no-repeat;
+}
+.sub_menu li .icon06{
+    background: url(../images/icons.png) 32px -390px no-repeat;
+}
+
+.slide{
+    width: 760px;
+    height: 100%;
+    background-color: gold;
+    position: relative;
+    overflow: hidden;
+}
+.slide_list{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4560px;
+    height: 100%;
+}
+.slide_list li{
+    width: 760px;
+    height: 100%;
+    float: left;
+}
+
+.slide .prev,.next{
+    position: absolute;
+    height: 23px;
+    width: 15px;
+    cursor: pointer;
+}
+.slide .prev{
+    background: url(../images/icons.png) -1px -450px no-repeat;
+    left: 11px;
+    top: 122px;
+}
+.slide .next{
+    background: url(../images/icons.png) -1px -500px no-repeat;
+    right: 11px;
+    top: 122px;
+}
+
+.points{
+    position: absolute;
+    width: 100%;
+    height: 11px;
+    left: 0;
+    bottom:10px;
+    font-size: 0;
+    text-align: center;
+    
+}
+
+.points li {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    background-color: #9f9f9f;
+    margin-left: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.points .active{
+    background-color: #ddd;
+}
+
+.adv{
+    height: 100%;
+    width: 240px;
+}
+/*两个图片排列在有些浏览器中会出现底部出现三像素空白的BUG，把图片转为display：block来解决*/
+.adv img{ 
+    display: block;
+}
+
+.common_model{
+    width: 1200px;
+    height: 336px;
+    margin: 20px auto 0;
+    /*background-color: pink;*/
+}
+
+.common_title{
+    height: 33px;
+    border-bottom: 2px solid #42ad46;
+}
+.common_title h3{
+    float: left;
+    font: bold 16px/33px "MicrosoftYaHei";
+    color: #42ad46;
+}
+
+.common_title ul{
+    float: left;
+    margin-left: 22px;
+}
+.common_title ul li {
+    float: left;
+    height: 33px;
+    margin-left: 15px;
+    line-height: 33px;
+    color: #666;
+}
+
+.common_title ul li a {
+    line-height: 33px;
+    color: #666;
+}
+
+.common_title ul li a:hover{
+    color: #f80;
+}
+
+.common_title .more{
+    height: 33px;
+    color: #666;
+    font: normal 12px/33px "MicrosoftYahei";
+}
+
+.common_title .more:hover{
+    color: #f80;
+}
+
+.common_banner{
+    width: 200px;
+    height: 300px;
+}
+.common_goods_list{
+    width: 1000px;
+    height: 300px;
+}
+.common_goods_list li {
+    border-right: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    height: 299px;
+    width: 249px;
+    float: left;
+}
+
+.common_goods_list li h4{
+    text-align: center;
+    font: normal 14px/52px "MicrosoftYaHei";
+}
+
+.common_goods_list li a{
+    height: 180px;
+    width: 180px;
+    margin: 0 auto;
+    display: block;
+    overflow: hidden;
+}
+
+.common_goods_list li div{
+    text-align: center;
+    font: bold 20px/40px "MicrosoftYaHei";
+    color: #c40000;
+    margin-top: 22px;
+}
+
+.footer{
+    margin-top: 30px;
+    border-top: 2px solid #42ad46;
+    margin-bottom: 34px;
+}
+
+.footer_links{
+    text-align: center;
+    color: #666;
+    margin-top: 38px;
+}
+
+.footer_links a,.footer_links span{
+    color: #4e4e4e;
+    font-size: 12px;
+}
+.footer_links span{
+    margin: 0 5px;
+}
+.footer_links a:hover{
+    color: #f80;
+}
+.copyright{
+    text-align: center;
+    font-size: 12px;
+    color: #4e4e4e;
+    line-height: 26px;
+    margin-top: 9px;
+}
+
+
+
+
+
+

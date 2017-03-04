@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新闻列表</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .news_list_con{
+            width: 600px;
+            height: 290px;
+            border: 1px solid #ddd;
+            margin: 50px auto 0;
+        }
+        .news_list_con h3{
+            margin: 0 auto;
+            width: 560px;
+            height: 50px;
+            border-bottom: 1px solid #ddd;
+        }
+        .news_list_con h3 span{
+            display: inline-block;
+            height: 50px;
+            border-bottom: 2px solid #f00;
+            font: normal 18px/50px "";
+            padding: 0 10px;
+        }
+        .news_list_con ul{
+            list-style: none;
+            width: 560px;
+            margin: 12px auto 0px;
+        }
+        .news_list_con li{
+            height: 37px;
+            border-bottom: 1px solid #ddd;
+            line-height: 37px;
+        }
+        .news_list_con li a:before{
+            content: "·";
+        }
+        .news_list_con li a{
+            float: left;
+            text-decoration: none;
+            font: normal 14px/36px "";
+        }
+         .news_list_con li a:hover{
+            color: red;
+        }
+        .news_list_con li span{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="news_list_con">
+        <h3><span>新闻列表</span></h3>
+        <ul>
+            <li><a href="#">新闻标题文字</a><span>2017.02.08</span></li>
+            <li><a href="#">新闻标题文字</a><span>2017.02.08</span></li>
+            <li><a href="#">新闻标题文字</a><span>2017.02.08</span></li>
+            <li><a href="#">新闻标题文字</a><span>2017.02.08</span></li>
+            <li><a href="#">新闻标题文字</a><span>2017.02.08</span></li>
+            <li><a href="#">新闻标题文字</a><span>2017.02.08</span></li>
+        </ul>
+    </div>
+</body>
+</html>
