@@ -314,7 +314,33 @@ body{
 .common_banner{
     width: 200px;
     height: 300px;
+    position: relative;
+    overflow: hidden;
+    text-align: center; 
 }
+.common_banner .mask{
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    width: 200px;
+    height: 120px;
+    left: 0;
+    top: 300px;
+    color: #fff;
+    transition: 0.25s ease;
+}
+.common_banner .mask h3{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.common_banner .mask p{
+    margin-top: 10px;
+    font-size: 14px;
+}
+.common_banner:hover .mask{
+    top: 180px;
+}
+
 .common_goods_list{
     width: 1000px;
     height: 300px;
