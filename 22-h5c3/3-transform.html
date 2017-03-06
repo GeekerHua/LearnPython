@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @keyframes walking{
+            from{
+                left: 0px;
+            }
+            to{
+                left: -960px;
+            }
+        }
+        .box0{
+            width: 120px;
+            height: 180px;
+            margin: 30px auto 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .box0 img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: walking 1s steps(8) infinite ;
+        }
+
+        @keyframes load{
+            from{
+                transform: scaleY(1);
+                transform-origin: 0px 100%;
+            }
+            to{
+                transform: scaleY(0.5);
+                transform-origin: 0px 100%;
+            }
+        }
+
+        .box1{
+            width: 300px;
+            height: 158px;
+            border: 1px solid #000;
+            margin: 30px auto 0;
+        }
+        .box1 div{
+            width: 30px;
+            height: 100px;
+            float: left;
+            margin: 15px;
+            border-radius: 15px;
+            /*animation: load 0.5s ease infinite alternate;*/
+        }
+        .box1 div:nth-child(1){
+            background-color: red;
+        }
+        .box1 div:nth-child(2){
+            background-color: green;
+            animation-delay: 100ms;
+
+        }
+        .box1 div:nth-child(3){
+            background-color: pink;
+            animation-delay: 200ms;
+
+        }
+        .box1 div:nth-child(4){
+            background-color: greenyellow;
+            animation-delay: 300ms;
+        }
+        .box1 div:nth-child(5){
+            background-color: cyan;
+            animation-delay: 400ms;
+        }
+
+        .box1 p{
+            text-align: center;
+        }
+
+
+
+        @keyframes rotate{
+            from{
+                transform: rotateZ(0deg);
+            }
+            to{
+                transform: rotateZ(380deg);
+            }
+        }
+        .fengche{
+            display: block;
+            margin: 50px auto 0;
+            /*animation: rotate 0.4s linear infinite;*/
+        }
+
+        @keyframes moving{
+            from{
+                width: 100px;
+                height: 100px;
+            }
+            to{
+                width: 500px;
+                height: 500px;
+            }
+        }
+
+        @keyframes moving2{
+            from{
+                width: 500px;
+                height: 500px;
+            }
+            to{
+                width: 100px;
+                height: 100px;
+            }
+        }
+        
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+            /*animation: moving 1s ease infinite alternate;*/
+        }
+        .box2:hover {
+            animation-play-state: paused;
+        }
+
+
+
+        .box3{
+            width: 300px;
+            height: 300px;
+            background-color: gold;
+            margin: 50px auto 0;
+            transition: all 500ms ease;
+            transform: rotateY(0deg);
+            transform-style: preserve-3d;
+            font-family: "MicrosoftYaHei";
+        }
+
+        .box3:hover{
+            transform: perspective(800px) rotateY(45deg);
+        }
+
+        .box4{
+            font-family: "PingFangSC-Regular";
+            width: 300px;
+            height: 300px;
+            background-color: gold;
+            margin: 50px auto 0;
+            transition: all 500ms ease;
+            transform: rotateY(0deg);
+            transform-style: preserve-3d;
+        }
+
+        .box4:hover{
+            transform: perspective(800px) rotateX(45deg);
+            background: url(../21-web/images/adv01.jpg) no-repeat;
+        }
+        .con {
+            width: 240px;
+            height: 140px;
+            margin: 50px auto 0;
+            transform-style: preserve-3d;
+            position: relative;
+            text-align: center;
+            line-height: 140px;
+        }
+        .con .box5{
+            width: 240px;
+            height: 140px;
+            transition: all 500ms ease;
+            transform: perspective(800px) rotateY(180deg);
+            /*backface-visibility: hidden;*/
+            position: absolute;
+            background-color: gold;
+            top: 0;
+            left: 0;
+        }
+        .con img{
+            position: absolute;
+            width: 240px;
+            height: 140px;
+            left: 0px;
+            /*backface-visibility: hidden;*/
+            top: 0;
+            transform: perspective(800px) rotateY(0deg);
+            transition: all 500ms ease;
+        }
+        .con:hover img{
+            transform: perspective(800px) rotateY(-180deg);
+        }
+        .con:hover .box5{
+            transform: perspective(800px) rotateY(0deg);
+            /*background: gold url(../21-web/images/adv02.jpg) no-repeat;*/
+            /*background: none;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box0">
+        <img src="../19-html/images/walking.png" alt="">
+    </div>
+    <div class="box1">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+        <div class="line4"></div>
+        <div class="line5"></div>
+        <p>loading...</p>
+    </div>
+
+    <img class="fengche" src="../19-html/images/fengche.png" alt="风车图片">
+    <div class="box2"></div>
+    <div class="box3">
+        雅黑
+    </div>
+    <div class="box4">
+         雅黑
+    </div>
+    <div class="con"> 
+        <div class="box5">
+            图片上的文字说明
+        </div>
+        <img src="../21-web/images/adv01.jpg" alt="">
+    </div>
+</body>
+</html>
