@@ -1,0 +1,18 @@
+// {
+//     // See https://go.microsoft.com/fwlink/?LinkId=733558
+//     // for the documentation about the tasks.json format
+//     "version": "0.1.0",
+//     "command": "sass",
+//     "isShellCommand": true,
+//     "args": ["-t", "expanded", "--watch", "--scss", "03-css.scss:03-css.css"], 
+//     "showOutput": "always"
+// }, 
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "command": "pug",
+    "isShellCommand": true,
+    "args": ["--watch", "02-pug.pug"], 
+    "showOutput": "always"
+}
