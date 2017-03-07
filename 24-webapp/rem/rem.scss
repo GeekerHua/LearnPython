@@ -1,0 +1,210 @@
+@function rem($pixels){
+    @return $pixels / 40 + rem;
+}
+@mixin full-width{
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+.main_wrap{
+    $header-footer-height:rem(100);
+    $icons-size: rem(120) rem(1680);
+    @include full-width;
+    top: 0;
+    bottom: 0;
+    background-color: #efefef;
+    overflow: hidden;
+  
+    .header{
+        @include full-width;
+        height: $header-footer-height;
+        background-color: green;
+        position: relative;
+        .logo{
+            display: block;
+            width: rem(178);
+            height: rem(72);
+            margin: rem(14) auto 0;
+            img{
+                width: 100%;
+            }
+        }
+        .search{
+            position: absolute;
+            width: rem(54);
+            height: rem(52);
+            right: rem(29);
+            top: rem(25);
+            background: url(../images/icons.png) left top no-repeat;
+            background-size: $icons-size;
+        }
+    }
+
+    .center_con{
+        @include full-width;
+        top: $header-footer-height;
+        bottom: $header-footer-height;
+        overflow-y: scroll;
+        .slide{
+            height: rem(280);
+            img{
+                width: 100%;
+            }
+        }
+
+        .menu_con{
+            height: rem(370);
+            background-color: #fff;
+            margin-top: rem(20);
+            overflow: hidden;
+            ul{
+                width: rem(710);
+                margin: rem(30) 0 0 rem(55);
+                li{
+                    height: rem(162);
+                    float: left;
+                    margin-right: rem(67);
+                    &,a{
+                        width: rem(110);
+                    }
+                    a{
+                        display: block;
+                        height: rem(112);
+                        // background: url(../images/icons.png) left rem($offset * -120) no-repeat;
+                        // background-size: $icons-size;
+                    }
+                    h2{
+                        text-align: center;
+                        color: #666;
+                        line-height: rem(50);
+                        font-size: 13px;
+                        height: rem(50);
+                    }
+                }
+                @for $offset from 1 through 8{
+                    li:nth-child(#{$offset}) a{
+                        // background-position: left rem($offset * -120);
+                        background: url(../images/icons.png) left rem($offset * -120) no-repeat;
+                        background-size: $icons-size;
+                    }
+                }   
+            }
+        }
+        $content-width: rem(710);
+        .common_model{
+            background-color: #fff;
+            margin: rem(20) 0;
+            padding-bottom: rem(28);
+            .common_title{
+                width: $content-width;
+                height: rem(36);
+                margin: rem(32) auto 0;
+                h3{
+                    float: left;
+                    height: rem(36);
+                    border-left: rem(10) solid #fdb83d;
+                    font: bold 15px/rem(36) "MicrosoftYaHei";
+                    color: #fdb83d;
+                    padding-left: rem(16);
+                }
+                a{
+                    float: right;
+                    color: #7f7f7f;
+                    font: normal 12px/rem(36) "Microsoft YaHei"
+                }
+            }
+            .banner{
+                width: $content-width;
+                margin: rem(20) auto 0;
+                img{
+                    width: 100%;
+                }
+            }
+            .goods_list{
+                width: $content-width;
+                margin: rem(22) auto 0;
+                li{
+                    width: 33.33%;
+                    height: rem(373);
+                    border-right: 1px solid #e7e7e7;
+                    float: left;
+                    box-sizing: border-box;
+                    position: relative;
+                    &:last-child{
+                        border-right: 0px;
+                    }
+                    .goods_pic{
+                        display: block;
+                        width: rem(180);
+                        height: rem(180);
+                        margin: 0.425rem auto 0;
+                    }
+                    h4{
+                        width: rem(200);
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        height: rem(40);
+                        font: normal 15px/rem(30) "MicrosoftYahei";
+                        color: #666;
+                        margin: rem(35) auto 0;
+                    }
+                    .unit{
+                        width: rem(200);
+                        margin: rem(32) auto 0;
+                        font: normal 12px /rem(20) "MicrosotYahei";
+                        color: #bbb;
+                    }
+                    .price{
+                        width: rem(200);
+                        margin: rem(20) auto 0;
+                        font: normal 12px /rem(18) "MicrosotYahei";
+                        color: #f40;
+                    }
+                    .add_chart{
+                        position: absolute;
+                        width: rem(68);
+                        height: rem(68);
+                        bottom: 0;
+                        right: rem(10);
+                        background: url(../images/icons.png) left rem(-1080) no-repeat;
+                        background-size: $icons-size;
+      
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        @include full-width;
+        bottom: 0;
+        height: $header-footer-height;
+        ul{
+            // width: 2.5rem;
+            li{
+                width: 25%;
+                height: 2.5rem;
+                float: left;
+                a{
+                    display: block;
+                    margin: rem(12) auto 0;
+                    width: rem(56);
+                    height: 1.35rem;
+                    // background: url(../images/icons.png) left rem(-1200) no-repeat;
+                    // background-size: $icons-size;
+                } 
+                h2{
+                    font: normal 12px/12px "MicrosoftYahei";
+                    color: #949494;
+                    text-align: center;
+                }
+            }
+            @for $offset from 1 through 4{
+                li:nth-child(#{$offset}) a{
+                    background: url(../images/icons.png) left rem($offset * -120 - 1080) no-repeat;
+                    background-size: $icons-size;
+                }
+            }  
+        }
+    }
+}

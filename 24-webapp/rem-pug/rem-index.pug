@@ -1,0 +1,51 @@
+doctype html
+html(lang="en")
+head
+	meta(charset="utf-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0")
+	title 天天生鲜首页rem布局
+	script(src="../js/set_root.js")
+	link(rel="stylesheet" href="../css/reset.css")
+	link(rel="stylesheet" href="../rem/rem.css")
+body
+	.main_wrap
+		.header.clearfix
+			a(href="" class="logo")
+				img(src="../images/logo.png", alt="天天生鲜logo")
+			a(class="search" href="#")
+
+		.center_con
+			.slide
+				img(src="../images/slide.jpg", alt="幻灯片")
+			.menu_con.clearfix
+				ul(class="clearfix")
+					- var menu = ["水果","海鲜","肉类","禽蛋","蔬菜","速冻","热卖","新品"]
+					each title in menu
+						li
+							a(href="#")
+							h2= title
+			.common_model.clearfix
+				.common_title 
+					h3 新鲜水果
+					a(href="#") &gt;更多
+				.banner
+					img(src="../images/banner.jpg", alt="banner")
+				
+				ul(class="goods_list clearfix")
+					- for (var i = 0; i<8; i++)
+						li 
+							a(href="#")
+								img(src="../images/goods.jpg", alt="商品图片" class="goods_pic")
+								h4 新西兰皇家大苹果
+								p(class="unit") 12/提
+								p(class="price") $6.80
+								a(href="#" class="add_chart")
+
+
+		.footer
+			ul(class="clearfix")
+				each title in ["首页","购物车","分类","我的"]
+					li
+						a(href="#")
+						h2=title
+			
