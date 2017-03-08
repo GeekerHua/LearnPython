@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            var oDiv = document.getElementById('div1');
+            oDiv.style.color = 'red';
+            // alert(div1.style.fontSize);
+            // . 用法
+            var sTy = 'color';
+            oDiv.style[sTy] = 'purple';
+            // [] 用法
+            var sVal = 'cyan';
+            oDiv['style'][sTy] = sVal;
+
+            // innerHTML 读取标签里的内容
+            var sTxt = oDiv.innerHTML;
+            // alert(sTxt);
+            oDiv.innerHTML += "嵌入的文字  <br>";
+            oDiv.innerHTML += "<a href = 'http://baidu.com'>百度</a>";
+
+            // 函数定义和调用
+            function fnMyalert(message = 'default message') {
+                alert(message);
+            }
+            // 方法合并
+            var oBtn = document.getElementById('btn');
+            oBtn.onclick = function () {
+                var oDiv = document.getElementById('div1');
+                oDiv.style.backgroundColor = 'yellow';
+                oDiv.style.color = 'red';
+            }
+        }
+
+        // 函数定义和调用
+        function fnMyalert(message = 'default message') {
+            alert(message);
+        }
+
+        function fnChange() {
+            var oDiv = document.getElementById('div1');
+            oDiv.style.fontSize = '30px';
+            oDiv.style.color = 'red';
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1" style="font-size: 32px">这是一个div元素<span>haha</span><br></div>
+    <input type="button" name="" value="按钮" onclick="fnMyalert('dd')">
+    <input type="button" name="" value="改变文字" onclick="fnChange()">
+    <input id="btn" type="button" name="" value="动态添加按钮">
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>按键切换</title>
+    <style>
+        div{
+            width: 200px;
+            height: 400px;
+            background-color: gold;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="button" id="btn01" value="点击">
+    <div id="div01"></div>
+    <script>
+        window.onload = function() {
+            var oDiv = document.getElementById('div01');
+            var oBtn = document.getElementById('btn01');
+
+            oBtn.onclick = function() {
+                var display = oDiv.style.display;
+                if (display=='none') {
+                    oDiv.style.display = 'block';
+                } else{
+                    oDiv.style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
