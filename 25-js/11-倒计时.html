@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>倒计时</title>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        var oDiv = document.getElementById('box');
+        var sNow = new Date();
+        var sFuturn = new Date(2017,2,15,20,0,0);
+        var iTimeLeft = parseInt((sFuturn - sNow)/1000);
+        var iDay = parseInt((iTimeLeft / 86400));
+        var iHours = parseInt((iTimeLeft % 86400) / 3600);
+        // var iMinutes = parseInt(iTimeLeft % 86400 % 3600 / 60);
+        var iMinutes = parseInt(iTimeLeft % 3600 / 60);
+        var iSeconds = parseInt(iTimeLeft % 60);
+        alert(iMinutes);
+    </script>
+</body>
+</html>

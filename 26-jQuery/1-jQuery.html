@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        // window.onload = function(){
+        //     var oDiv = document.getElementById('div1');
+        //     alert(oDiv);
+        // }
+
+        // $(document).ready(function() {
+        //     var $div = $('#div1')
+        //     alert($div);
+        // })
+
+        // 简写版本的ready
+        // $(function() {
+        //     var $div = $('#div1')
+        //     alert($div);
+        // })
+        $(function(){
+            var $div1 = $('#div1');
+            var $div2 = $('#div2');
+            var $li = $('.list li');
+            // alert($div1);
+            $div1.css({'color':'red'});
+            $div2.css({'color': 'green', 'font-size': '35px'});
+            $li.css({'background-color': 'gold'});
+        })
+    </script>
+</head>
+<body>
+    <div id="div1">这是一个div元素</div>
+    <div id="div2">这是第二个div</div>
+    <ul class="list">
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ul>
+</body>
+</html>

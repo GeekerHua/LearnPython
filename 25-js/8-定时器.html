@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定时器</title>
+    <style>
+        .box{
+            background-color: gold;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!--// 定时器动画-->
+    <div class="box" id="box"></div>
+    <script>
+        var oBox = document.getElementById('box');
+        var left = 0;
+        var direction = 0;
+        function fnMove() {
+            (direction == 0) ? (left += 10) : (left -= 10);
+            oBox.style.left = left + 'px';
+            if ((left+100) >= window.innerWidth) {
+                direction = 1;
+            } else if(left <= 0) {
+                direction = 0;
+            }
+        };
+        setInterval(fnMove,0.1);
+
+        
+        //  定时器
+        function popAlert() {
+            alert('haha');
+        };
+        // var timer01 = setTimeout(popAlert, 1000);
+        // var timer02 = setInterval(popAlert, 1000);
+        // clearInterval(timer02);
+    </script>
+</body>
+</html>

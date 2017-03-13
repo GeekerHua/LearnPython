@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>时钟</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+
+    <script>
+        function fnTimeGo() {
+            var oDiv = document.getElementById('box');
+            var sNow = new Date();
+            var iYear = sNow.getFullYear();
+            var iMonth = sNow.getMonth() + 1;
+            var iHours = sNow.getHours();
+            var iDate = sNow.getDate();
+            var iWeek = sNow.getDay();
+            var iMinutes = sNow.getMinutes();
+            var iSeconds = sNow.getSeconds();
+            var sDate = '当前时间是:' + iYear + '年' + iMonth + '月' + iDate + '日' + '星期：'+iWeek + ' '+ iHours+':' + iMinutes+ ':' + iSeconds;
+            oDiv.innerHTML = sDate
+            document.title = sDate;
+        }
+        fnTimeGo();
+        setInterval(fnTimeGo,1000);
+    </script>
+</body>
+</html>

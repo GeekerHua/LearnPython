@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>计算器</title>
+</head>
+<body>
+    <h2>计算器</h2>
+    <input type="text" id="val01">
+    <select name="" id="fuhao">
+        <option value="0">+</option>
+        <option value="1">-</option>
+        <option value="2">*</option>
+        <option value="3">÷</option>
+    </select>
+    <input type="text" id="val02">
+    <input type="button" value="计算" id="btn">
+
+    <script>
+        var oTxt01 = document.getElementById('val01');
+        var oTxt02 = document.getElementById('val02');
+        var oFuhao = document.getElementById('fuhao');
+        var oBtn = document.getElementById('btn');
+        
+        oBtn.onclick = function() {
+            var iNum01 = oTxt01.value;
+            var iNum02 = oTxt02.value;
+            if (iNum01=='' | iNum02=='') {
+                alert('不能为空');
+                return;
+            }
+            if (isNaN(iNum01) || isNaN(iNum02)){            
+                alert('请输入数字');
+            }
+            switch (oFuhao.value) {
+                case '0': 
+                    alert((parseFloat(iNum01)*100 + parseFloat(iNum02)*100)/100);
+                    break;
+                case '1': 
+                    alert((parseFloat(iNum01)*100 - parseFloat(iNum02)*100)/100);
+                    break;
+                case '2': 
+                    alert((parseFloat(iNum01)*100 * parseFloat(iNum02)*100)/10000);
+                    break;
+                case '3': 
+                    alert((parseFloat(iNum01)*100 / parseFloat(iNum02)*100)/10000);
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
+

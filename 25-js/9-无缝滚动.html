@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>无缝滚动</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+
+		.list_con{
+			
+			width:1000px;
+			height:200px;
+			border:1px solid #000;
+			margin:10px auto 0;
+			background-color:#f0f0f0;
+			position:relative;
+			overflow:hidden;
+		}
+
+		.list_con ul{
+			list-style:none;
+			width:2000px;
+			height:200px;
+			position:absolute;
+			left:0;
+			top:0;
+		}
+
+
+		.list_con li{
+			width:180px;
+			height:180px;
+			float:left;
+			margin:10px;
+		}
+
+		.btns_con{
+			width:1000px;
+			height:30px;
+			margin:50px auto 0;
+			position:relative;
+		}
+
+		.left,.right{
+			width:30px;
+			height:30px;
+			background-color:gold;
+			position:absolute;
+			left:-40px;
+			top:124px;
+			font-size:30px;
+			line-height:30px;
+			color:#000;
+			font-family: 'Arial';
+			text-align:center;
+			cursor:pointer;
+			border-radius:15px;
+			opacity:0.5;
+		}
+
+		.right{
+			left:1010px;			
+			top:124px;			
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="btns_con">
+		<div class="left" id="btn01">&lt;</div>
+		<div class="right" id="btn02">&gt;</div>
+	</div>
+	<div class="list_con" id="slide">
+		<ul>
+		<li><a href=""><img src="images/goods001.jpg" alt="商品图片"></a></li>
+		<li><a href=""><img src="images/goods002.jpg" alt="商品图片"></a></li>
+		<li><a href=""><img src="images/goods003.jpg" alt="商品图片"></a></li>
+		<li><a href=""><img src="images/goods004.jpg" alt="商品图片"></a></li>
+		<li><a href=""><img src="images/goods005.jpg" alt="商品图片"></a></li>
+		</ul>		
+	</div>
+
+	<script>
+		var oDiv = document.getElementById('slide');
+		var oUl = oDiv.getElementsByTagName('ul')[0];
+		var oBtn01 = document.getElementById('btn01');
+		var oBtn02 = document.getElementById('btn02');
+
+		oUl.innerHTML += oUl.innerHTML;
+		console.log(oUl);
+		var iLestPos = 0;
+		var iSpeed = 2;
+		var tmpSpeed = iSpeed;
+		oUl.onmouseover = function() {
+			tmpSpeed = iSpeed;// ? iSpeed : tmpSpeed;
+			iSpeed = 0;
+		}
+
+		oUl.onmouseout = function() {
+			iSpeed = tmpSpeed;
+		}
+
+		oBtn01.onclick = function() {
+			iSpeed = 2;
+		};
+		oBtn02.onclick = function() {
+			iSpeed = -2;
+		};
+
+		function fnMove (){
+			iLestPos -= iSpeed;
+			if (iSpeed > 0) {
+				if (iLestPos < -1000) {
+					iLestPos = 0;
+				}
+			} else {
+				if (iLestPos > 0) {
+					iLestPos = -1000;
+				}
+			}
+			oUl.style.left = iLestPos + 'px';
+		}
+		var timer = setInterval(fnMove,6);
+	</script>
+</body>
+</html>
