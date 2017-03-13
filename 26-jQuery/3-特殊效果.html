@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery特殊效果</title>
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script>
+        $(function() {
+            // fadein fadeout
+            function show() {
+                $('.box01').fadeIn(1000, 'swing', function() {
+                    $(this).fadeOut(1000, show);
+                });
+            }
+            // $('#btn01').click(show);
+
+            function toggle() {
+                $('.box01').fadeToggle('fast', function(){
+                    toggle();
+                });
+            }
+            // $('#btn01').click(toggle);
+
+            function slide() {
+                $('.box01').slideToggle('fast', function(){
+                    slide();
+                });
+            }
+            // $('#btn01').click(slide);
+
+
+        })
+    </script>
+    <style>
+        .box01{
+            width: 200px;
+            height: 200px;
+            background-color:tomato;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="button" id="btn01" value="渐隐">
+    <div class="box01"></div>
+</body>
+</html>

@@ -24,25 +24,36 @@
         // })
         $(function(){
             var $div1 = $('#div1');
-            var $div2 = $('#div2');
+            var $div2 = $('div[class=myclass]');
             var $li = $('.list li');
             // alert($div1);
             $div1.css({'color':'red'});
             $div2.css({'color': 'green', 'font-size': '35px'});
             $li.css({'background-color': 'gold'});
+            $li.css({'background-color': 'gold'});
+            var $li1 = $li.eq(0);
+            $li1.css({'color': 'tomato'});
+            $li3 = $('.list li').eq(2);
+            $li3.css({'background-color':'red'});
+            $li3.prev().css({'background-color':'purple'});
+            $li3.next().css({'background-color':'pink'});
+            $li3.nextAll().css({'background-color':'pink'});
+            $li3.siblings().css({'background-color':'pink'});
+
         })
     </script>
 </head>
 <body>
     <div id="div1">这是一个div元素</div>
-    <div id="div2">这是第二个div</div>
+    <div id="div2" class='myclass'>这是第二个div</div>
     <ul class="list">
         <li>1</li>
-        <li>1</li>
-        <li>1</li>
-        <li>1</li>
-        <li>1</li>
-        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
     </ul>
+    <a href="file:///Users/hua/Code/LearnPython/26-jQuery/2-选项卡.html#2">link</a>
 </body>
 </html>
