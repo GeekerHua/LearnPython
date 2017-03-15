@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            var $menu = $('.menu');
+            
+            // 屏幕滚动监听
+            $(window).scroll(function(){
+                // console.log($(document).scrollTop());
+                // $('.box').css({top: (100 + $(document).scrollTop())});
+                var $top = $(document).scrollTop();
+                var $menu_back = $('.menu_back');
+                console.log($top);
+                if ($top >= 200) {
+                    $menu.css({
+                        position: 'fixed',
+                        left: '50%', 
+                        top: 0,
+                        marginLeft: '-250px'
+                    })
+                    $menu_back.show();
+                } else{
+                    $menu_back.hide();
+                    $menu.css({
+                        position: 'static',
+                        marginLeft: 'auto'
+                    })
+                }
+                
+                // 返回顶部按钮显示与隐藏
+                $('.totop').stop();
+                if ($top>400) {
+                    $('.totop').fadeIn()
+                } else {
+                    $('.totop').fadeOut();
+                }
+            })
+
+            // 返回顶部按钮设置
+            $('.totop').click(function(){
+                $('html,body').animate({'scrollTop':0})
+            })
+        })
+
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .menu,.menu_back{
+            background-color: gold;
+            width: 500px;
+            height: 40px;
+            text-align: center;
+            margin: 0 auto 0;
+        }
+        .menu_back{
+            display: none;
+        }
+        .banner{
+            width: 500px;
+            height: 200px;
+            background-color:tomato;
+            text-align: center;
+            margin: 0 auto 0;
+        }
+        p{
+            text-align: center;
+        }
+        .totop{
+            width: 60px;
+            height: 60px;
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+            cursor: pointer;
+            line-height: 60px;
+            text-align: center;
+            background-color: tomato;
+            border-radius: 30px;
+            display: none;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner"></div>
+    <div class="menu">菜单</div>
+    <div class="menu_back"></div>
+    <div class="totop" id="totop">☝</div>
+    <p>'页面标签1'</p>
+    <p>'页面标签2'</p>
+    <p>'页面标签3'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+    <p>'页面标签'</p>
+</body>
+</html>

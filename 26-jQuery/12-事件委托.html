@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <style>
+        ul{
+            margin: 30 auto 0;
+        }
+        li {
+            margin: 10px;
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <ul class="list">
+        <li class="li01"></li>
+        <li class="li02"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <script>
+        // $('.list li').click(function(){
+        //     $(this).css({'backgroundColor': "red"});
+        // })
+
+        $('.list').delegate("li", 'click', function(){
+            // $(this).css({'backgroundColor': "red"});
+            if ($(this).prop('class') == 'li01') {
+                $(this).css({'backgroundColor': "purple"});
+            } else {
+                $(this).css({'backgroundColor': "red"});
+            }
+        })
+    </script>
+</body>
+</html>

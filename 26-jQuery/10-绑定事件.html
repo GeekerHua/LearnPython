@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绑定事件，事件冒泡</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <style>
+        .div{
+            background-color: gold;
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+        }
+        .box{
+            background-color: green;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+        <div class="box">
+        </div>
+    </div>
+
+    <script>
+        var $div = $('.div');
+        // 子集会出发父集的事件。
+        // $div.mouseover(function(){
+        //     $div.animate({'marginTop':50})
+        // })
+        // $div.mouseout(function(){
+        //     $div.animate({'marginTop':20})
+        // })
+
+        // 解决事件冒泡
+        // $div.mouseenter(function(){
+        //     $div.animate({'marginTop':50})
+        // })
+        // $div.mouseleave(function(){
+        //     $div.animate({'marginTop':20})
+        // })
+
+        // 合并写法
+        $div.hover(function(){
+            $div.animate({'marginTop':50})
+        }, function(){
+            $div.animate({'marginTop':20})
+        })
+    </script>
+</body>
+</html>

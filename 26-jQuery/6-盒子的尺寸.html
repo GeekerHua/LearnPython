@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <style>
+        .box{
+            width: 50px;
+            height: 160px;
+            padding: 20px;
+            margin: 50px auto;
+            background-color: gold;
+            border: 4px solid #000;
+        }
+        .pop{
+            width: 100px;
+            height: 200px;
+            background-color:green;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="pop">haha44 </div>
+    <script>
+        var $div = $('.box');
+        console.log($div.width());
+        console.log($div.innerWidth());
+        console.log($div.outerWidth());
+        console.log($div.outerWidth(true));
+        console.log('相对于页面的绝对位置');
+        // console.log($div.offset());
+        
+        $div.mouseover(function(){
+            var $pos = $('.box').offset();
+            $('.pop').css({left:$pos.left + $div.outerWidth(), top:$pos.top});
+            $('.pop').show();
+        })
+        $div.mouseout(function(){
+            $('.pop').hide();
+        })
+    
+    </script>
+</body>
+</html>

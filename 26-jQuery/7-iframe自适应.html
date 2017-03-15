@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>iframe自适应</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <style>
+        .menu{
+            width: 280px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background-color: #ddd;
+            overflow: scroll;
+        }
+        .myframe{
+            position: absolute;
+            left: 280px;
+            top: 0px;
+            bottom: 0;
+            right: 0;
+            /*height: 100%;*/
+            /*width: 70%;*/
+            box-sizing: border-box;
+        }
+    </style>
+
+    <script>
+        function fnSetSize() {
+            var $ww = $(window).width();
+            var $wh = $(window).height();
+            $('.myframe').css({width: $ww - 280, height: $wh});
+        }
+
+        $(function(){
+            fnSetSize();
+            $(window).resize(fnSetSize);
+        })
+    </script>
+</head>
+<body>
+    <div class="menu" >
+        <ul>
+            <li><a href="./3-特殊效果.html" target="myframe">3-特殊效果</a></li>
+            <li><a href="./4-层级菜单.html" target="myframe">4-层级菜单</a></li>
+            <li><a href="./5-手风琴.html" target="myframe">5-手风琴</a></li>
+            <li><a href="./6-盒子的尺寸.html" target="myframe">6-盒子的尺寸</a></li>
+        </ul>
+        <ul>
+            <li><a href="./3-特殊效果.html" target="myframe">3-特殊效果</a></li>
+            <li><a href="./4-层级菜单.html" target="myframe">4-层级菜单</a></li>
+            <li><a href="./5-手风琴.html" target="myframe">5-手风琴</a></li>
+            <li><a href="./6-盒子的尺寸.html" target="myframe">6-盒子的尺寸</a></li>
+        </ul>
+        <ul>
+            <li><a href="./3-特殊效果.html" target="myframe">3-特殊效果</a></li>
+            <li><a href="./4-层级菜单.html" target="myframe">4-层级菜单</a></li>
+            <li><a href="./5-手风琴.html" target="myframe">5-手风琴</a></li>
+            <li><a href="./6-盒子的尺寸.html" target="myframe">6-盒子的尺寸</a></li>
+        </ul>
+        <ul>
+            <li><a href="./3-特殊效果.html" target="myframe">3-特殊效果</a></li>
+            <li><a href="./4-层级菜单.html" target="myframe">4-层级菜单</a></li>
+            <li><a href="./5-手风琴.html" target="myframe">5-手风琴</a></li>
+            <li><a href="./6-盒子的尺寸.html" target="myframe">6-盒子的尺寸</a></li>
+        </ul>
+        <ul>
+            <li><a href="./3-特殊效果.html" target="myframe">3-特殊效果</a></li>
+            <li><a href="./4-层级菜单.html" target="myframe">4-层级菜单</a></li>
+            <li><a href="./5-手风琴.html" target="myframe">5-手风琴</a></li>
+            <li><a href="./6-盒子的尺寸.html" target="myframe">6-盒子的尺寸</a></li>
+        </ul>
+        <ul>
+            <li><a href="./3-特殊效果.html" target="myframe">3-特殊效果</a></li>
+            <li><a href="./4-层级菜单.html" target="myframe">4-层级菜单</a></li>
+            <li><a href="./5-手风琴.html" target="myframe">5-手风琴</a></li>
+            <li><a href="./6-盒子的尺寸.html" target="myframe">6-盒子的尺寸</a></li>
+        </ul>
+        <ul>
+            <li><a href="./3-特殊效果.html" target="myframe">3-特殊效果</a></li>
+            <li><a href="./4-层级菜单.html" target="myframe">4-层级菜单</a></li>
+            <li><a href="./5-手风琴.html" target="myframe">5-手风琴</a></li>
+            <li><a href="./6-盒子的尺寸.html" target="myframe">6-盒子的尺寸</a></li>
+        </ul>
+    </div>
+
+    <iframe src="./6-盒子的尺寸.html" frameborder="0" scrolling="auto"  class="myframe" name="myframe"></iframe>
+</body>
+</html>
