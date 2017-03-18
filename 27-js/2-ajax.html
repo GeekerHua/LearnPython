@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ajax</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        // $.ajax({
+        //         url: 'js/data.json',
+        //         type: 'GET',
+        //         dataType: 'json',
+        //         data: {},
+        //     })
+        //     .done(function (data) {
+        //         console.log(data);
+        //     })
+        //     .fail(function () {
+        //         // console.log(error)
+        //         console.log("相应超时!!!!");
+        //     })
+
+        // jsonp
+
+        $.ajax({
+                url: 'js/data2.js',
+                type: 'get',
+                dataType: 'jsonp',
+                jsonpCallback: 'fnCallback'
+            })
+            .done(function (data) {
+                console.log(data);
+            })
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

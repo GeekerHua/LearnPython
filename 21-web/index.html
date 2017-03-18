@@ -1,13 +1,38 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>天天生鲜-首页</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $.ajax({
+                    url: 'js/user.json',
+                    type: 'get',
+                    dataType: 'json'
+                })
+                .done(function (data) {
+                    console.log(data);
+                    if (data.code == 1) {
+                        $('.user_login_btn').hide();
+                        $('.user_info').show();
+                        $('.user_info em').html(data.data.name);
+                    }
+                })
+                .fail(function () {
+                    alert('服务器请求失败');
+                })
+
+
+        })
+    </script>
 </head>
+
 <body>
-<!-- 页面顶部 -->
+    <!-- 页面顶部 -->
     <div class="header_con">
         <div class="header">
             <div class="welcome fl">欢迎来到天天生鲜！</div>
@@ -21,7 +46,7 @@
                 <div class="user_info fl" style="display:block">
                     欢迎你！<em>张三</em>
                 </div>
-                
+
                 <div class="user_link fl">
                     <span>|</span>
                     <a href="#">我的购物车</a>
@@ -35,12 +60,12 @@
     <!-- logo区域 -->
     <div class="center_con">
         <a href="index.html" class="logo fl"><img src="images/logo.png" alt="天天生鲜网站logo" /></a>
-        
+
         <div class="search_con fl">
-             <form action="#">
-                 <input type="text" name="" value="" class="input_txt fl" placeholder="搜索" />
-                 <input type="submit" name="" value="搜索" class="input_sub fr" />
-             </form>
+            <form action="#">
+                <input type="text" name="" value="" class="input_txt fl" placeholder="搜索" />
+                <input type="submit" name="" value="搜索" class="input_sub fr" />
+            </form>
         </div>
 
         <div class="chart_con fr">
@@ -60,7 +85,7 @@
             </ul>
         </div>
     </div>
-    
+
     <!-- 中间轮播图区域 -->
     <div class="center_con2">
         <ul class="sub_menu fl">
@@ -75,12 +100,24 @@
 
         <div class="slide fl">
             <ul class="slide_list">
-                <li><a href="#"><img src="images/slide.jpg" alt="水果节" /></a></li>
-                <li><a href="#"><img src="images/slide.jpg" alt="水果节" /></a></li>
-                <li><a href="#"><img src="images/slide.jpg" alt="水果节" /></a></li>
-                <li><a href="#"><img src="images/slide.jpg" alt="水果节" /></a></li>
-                <li><a href="#"><img src="images/slide.jpg" alt="水果节" /></a></li>
-                <li><a href="#"><img src="images/slide.jpg" alt="水果节" /></a></li>
+                <li>
+                    <a href="#"><img src="images/slide.jpg" alt="水果节" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/slide.jpg" alt="水果节" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/slide.jpg" alt="水果节" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/slide.jpg" alt="水果节" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/slide.jpg" alt="水果节" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/slide.jpg" alt="水果节" /></a>
+                </li>
             </ul>
 
             <div class="prev"></div>
@@ -111,7 +148,7 @@
             </ul>
             <a href="#" class="more fr">查看更多></a>
         </div>
-    
+
         <div class="common_goods_con">
             <div class="common_banner fl">
                 <a href="#" class="fl"><img src="images/banner01.jpg" alt="商品banner" /></a>
@@ -121,20 +158,24 @@
                 </div>
             </div>
 
-             <ul class="common_goods_list fl">
-                <li><h4>草莓</h4>
+            <ul class="common_goods_list fl">
+                <li>
+                    <h4>草莓</h4>
                     <a href=""> <img src="images/goods.jpg" alt="商品图片" /></a>
                     <div>$ 18.00</div>
                 </li>
-                <li><h4>草莓</h4>
+                <li>
+                    <h4>草莓</h4>
                     <a href=""> <img src="images/goods.jpg" alt="商品图片" /></a>
                     <div>$ 18.00</div>
                 </li>
-                <li><h4>草莓</h4>
+                <li>
+                    <h4>草莓</h4>
                     <a href=""> <img src="images/goods.jpg" alt="商品图片" /></a>
                     <div>$ 18.00</div>
                 </li>
-                <li><h4>草莓</h4>
+                <li>
+                    <h4>草莓</h4>
                     <a href=""> <img src="images/goods.jpg" alt="商品图片" /></a>
                     <div>$ 18.00</div>
                 </li>
@@ -152,7 +193,7 @@
             </ul>
             <a href="#" class="more fr">查看更多></a>
         </div>
-    
+
         <div class="common_goods_con">
             <div class="common_banner fl">
                 <a href="#" class="fl"><img src="images/banner02.jpg" alt="商品banner" /></a>
@@ -162,20 +203,24 @@
                 </div>
             </div>
 
-             <ul class="common_goods_list fl">
-                <li><h4>草莓</h4>
+            <ul class="common_goods_list fl">
+                <li>
+                    <h4>草莓</h4>
                     <a href=""> <img src="images/goods.jpg" alt="商品图片" /></a>
                     <div>$ 18.00</div>
                 </li>
-                <li><h4>草莓</h4>
+                <li>
+                    <h4>草莓</h4>
                     <a href=""> <img src="images/goods.jpg" alt="商品图片" /></a>
                     <div>$ 18.00</div>
                 </li>
-                <li><h4>草莓</h4>
+                <li>
+                    <h4>草莓</h4>
                     <a href=""> <img src="images/goods.jpg" alt="商品图片" /></a>
                     <div>$ 18.00</div>
                 </li>
-                <li><h4>草莓</h4>
+                <li>
+                    <h4>草莓</h4>
                     <a href=""> <img src="images/goods.jpg" alt="商品图片" /></a>
                     <div>$ 18.00</div>
                 </li>
@@ -194,7 +239,7 @@
             </ul>
             <a href="#" class="more fr">查看更多></a>
         </div>
-    
+
         <div class="common_goods_con">
             <div class="common_banner fl">
                 <a href="#" class="fl"><img src="images/banner03.jpg" alt="商品banner" /></a>
@@ -204,20 +249,24 @@
                 </div>
             </div>
 
-             <ul class="common_goods_list fl">
-                <li><h4>草莓</h4>
+            <ul class="common_goods_list fl">
+                <li>
+                    <h4>草莓</h4>
                     <a href=""> <img src="images/goods.jpg" alt="商品图片" /></a>
                     <div>$ 18.00</div>
                 </li>
-                <li><h4>草莓</h4>
+                <li>
+                    <h4>草莓</h4>
                     <a href=""> <img src="images/goods.jpg" alt="商品图片" /></a>
                     <div>$ 18.00</div>
                 </li>
-                <li><h4>草莓</h4>
+                <li>
+                    <h4>草莓</h4>
                     <a href=""> <img src="images/goods.jpg" alt="商品图片" /></a>
                     <div>$ 18.00</div>
                 </li>
-                <li><h4>草莓</h4>
+                <li>
+                    <h4>草莓</h4>
                     <a href=""> <img src="images/goods.jpg" alt="商品图片" /></a>
                     <div>$ 18.00</div>
                 </li>
@@ -236,7 +285,7 @@
             </ul>
             <a href="#" class="more fr">查看更多></a>
         </div>
-    
+
         <div class="common_goods_con">
             <div class="common_banner fl">
                 <a href="#" class="fl"><img src="images/banner04.jpg" alt="商品banner" /></a>
@@ -246,20 +295,24 @@
                 </div>
             </div>
 
-             <ul class="common_goods_list fl">
-                <li><h4>草莓</h4>
+            <ul class="common_goods_list fl">
+                <li>
+                    <h4>草莓</h4>
                     <a href=""> <img src="images/goods.jpg" alt="商品图片" /></a>
                     <div>$ 18.00</div>
                 </li>
-                <li><h4>草莓</h4>
+                <li>
+                    <h4>草莓</h4>
                     <a href=""> <img src="images/goods.jpg" alt="商品图片" /></a>
                     <div>$ 18.00</div>
                 </li>
-                <li><h4>草莓</h4>
+                <li>
+                    <h4>草莓</h4>
                     <a href=""> <img src="images/goods.jpg" alt="商品图片" /></a>
                     <div>$ 18.00</div>
                 </li>
-                <li><h4>草莓</h4>
+                <li>
+                    <h4>草莓</h4>
                     <a href=""> <img src="images/goods.jpg" alt="商品图片" /></a>
                     <div>$ 18.00</div>
                 </li>
@@ -282,4 +335,5 @@
         </p>
     </div>
 </body>
+
 </html>
