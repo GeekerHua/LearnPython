@@ -6,6 +6,7 @@ from django.db import models
 
 class BookInfoManager(models.Manager):
     def get_queryset(self):
+        # 更改原始询机合
         return super(BookInfoManager, self).get_queryset().filter(isDelete=False)
 
 # 使用Manager进行创建对象
@@ -25,7 +26,7 @@ class BookInfo(models.Model):
     bcommet = models.IntegerField(default=0)
     isDelete = models.BooleanField(default=False)
 
-    #  自定义Manager
+    #  自定义Manager,默认管理器是objects，自定义Manager可以实现自己方法
     books = BookInfoManager()
     objects = models.Manager()
 
