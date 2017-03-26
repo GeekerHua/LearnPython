@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>城市列表</title>
+</head>
+
+<body>
+    当前城市：{{city.atitle}}
+    <hr> 所在省：{{city.aParent.atitle}}
+    <hr> 包含区县列表:
+    <ul>
+        {%for item in city.areainfo_set.all%}
+        <li>{{item.atitle}}</li>
+        {%endfor%}
+    </ul>
+</body>
+
+</html>
