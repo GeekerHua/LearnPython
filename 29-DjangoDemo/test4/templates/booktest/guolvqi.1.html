@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>过滤器</title>
+</head>
+
+<body>
+    <ul>
+        {% for book in list %} 
+        {% if book.btitle|length < 5 %} 
+        <li style="background-color: red">{{ book.btitle }}
+             --- 未格式化：{{book.bpub_date}}
+            </li>
+            {% else %}
+            <li style="background-color: yellow">{{ book.btitle }} --- 格式化：{{book.bpub_date|date:'Y-m-j'}}
+            </li>
+            {% endif %} {% endfor %}
+    </ul>
+</body>
+
+</html>

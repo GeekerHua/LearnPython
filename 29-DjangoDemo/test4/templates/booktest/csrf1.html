@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>scrf</title>
+</head>
+<body>
+    <form action="/csrf2/" method="post">
+        {#防止跨网站访问#}
+        {% csrf_token %}
+        <input type="text" name="to">
+        <br>
+        <input type="text" name="count">
+        <br>
+        <input type="submit" value="转账">
+    </form>
+
+</body>
+</html>

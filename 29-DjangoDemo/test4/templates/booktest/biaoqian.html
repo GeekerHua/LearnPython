@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>标签</title>
+</head>
+
+<body>
+    <ul>
+        {%for book in list%} 
+            {%if book.id < 3%} 
+            <li style="background-color: red">{{book}}</li>
+            {%elif book.id < 4%} 
+            <li style="background-color: blue">{{book}}</li>
+            {%else%}
+            <li style="background-color: green">{{book}}</li>
+            {%endif%} 
+            {%empty%}
+            <li>当前没有图书信息</li>
+        {%endfor%}
+    </ul>
+
+</body>
+
+</html>
