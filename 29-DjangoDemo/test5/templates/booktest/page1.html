@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>分页显示数据</title>
+</head>
+<body>
+    <ul>
+        {% for area in page %}
+        <li>{{area.atitle}}</li>
+        {% endfor %}
+    </ul>
+    <hr>
+        {% for pindex in paginator.page_range  %}
+            {% if pindex == page.number %}
+                {{pindex}}
+            {% else %}
+                <a href="/page{{pindex}}/">{{pindex}}</a>
+            {% endif %}
+        {% endfor %}
+</body>
+</html>

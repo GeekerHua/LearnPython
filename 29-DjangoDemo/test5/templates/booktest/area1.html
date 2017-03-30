@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/static/js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            $.get('/sheng/', function(data){
+                $.each(data['list'], function(i,n){
+                    $op = $('<option value="' + n[0] + '">' + n[1] + '</option>');
+                    $('#sheng').append($op);
+                })
+            });
+
+            $('#sheng').change(function(){
+                $.get('/shi'+ $(this).val() +'/', function(data){
+                    $('#shi').empty().append($('<option value="0">请选择市</option>'))
+                    $('#xian').empty().append($('<option value="0">请选择县</option>'))
+                    $.each(data['list'], function(i,n){
+                        $op = $('<option value="' + n[0] + '">' + n[1] + '</option>');
+                        $('#shi').append($op);
+                    })
+                });
+            });
+
+            $('#shi').change(function(){
+                $.get('/shi'+ $(this).val() +'/', function(data){
+                    $('#xian').empty().append($('<option value="0">请选择县</option>'))
+                    $.each(data['list'], function(i,n){
+                        $op = $('<option value="' + n[0] + '">' + n[1] + '</option>');
+                        $('#xian').append($op);
+                    })
+                });
+            });
+        });
+    </script>
+    <title>省市区县选择</title>
+</head>
+<body>
+    <select name="" id="sheng">
+        <option value="0">请选择省</option>
+    </select>
+    <select name="" id="shi">
+        <option value="0">请选择市</option>
+    </select>
+    <select name="" id="xian">
+        <option value="0">请选择县</option>
+    </select>
+</body>
+</html>
