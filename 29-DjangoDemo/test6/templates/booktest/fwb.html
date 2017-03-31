@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/static/js/tiny_mce.js"></script>
+    <script>
+        tinyMCE.init({
+            'mode':'textareas',
+            'theme':'advanced',
+            'width':400,
+            'height':100
+        });
+    </script>
+    <title>富文本</title>
+</head>
+<body>
+    <form action="/fwb2/" method="POST">
+        {% csrf_token %}
+        <textarea name="fwb" id="" cols="30" rows="10"></textarea>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>
