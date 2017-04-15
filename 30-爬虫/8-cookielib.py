@@ -19,7 +19,9 @@ cookiejar.save()
 # cookiejar.load()
 
 cookies = ''
-for item in cookiejar:
+for item in
+
+cookiejar:
     cookies = cookies + item.name + '=' + item.value + ';'
 
 print cookies
