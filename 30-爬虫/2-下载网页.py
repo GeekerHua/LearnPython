@@ -13,7 +13,7 @@ import random
 
 def writePage(html, fileName):
     """
-    保存网页到本地
+        保存网页到本地
     """
     print '正在存储' + fileName
     with open(fileName + '.html', 'w') as ff:
@@ -22,6 +22,11 @@ def writePage(html, fileName):
 
 
 def loadPage(url, fileName):
+    '''
+        发送页面请求
+        url: 贴吧的请求url
+        fileName: 要保存的文件名
+    '''
     list = [
         'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36']
 # print html
@@ -35,6 +40,12 @@ def loadPage(url, fileName):
 
 
 def tiebaSpider(url, begin=0, end=1):
+    '''
+        爬虫调度器
+        url: 贴吧链接url
+        begin: 其实页码
+        end: 终止页码
+    '''
     for page in range(begin, end + 1):
         pn = (page - 1) * 50
         fullUrl = url + '&pn=%d' % pn
